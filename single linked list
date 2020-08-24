@@ -5,17 +5,17 @@ typedef struct listitem
 {
     struct listitem *next;
     int data;
-}listitem;
+}listitem_t;
 
 int main()
 {
-    listitem *listhead, *temp;
+    listitem_t *listhead, *temp;
     listhead = NULL;
     
     //now populate the list
     for(int i=0;i<3;i++)
     {
-        temp = malloc(sizeof(listitem));
+        temp = malloc(sizeof(listitem_t));
         temp->data = i;
         temp->next = listhead;
         listhead = temp;
@@ -30,3 +30,4 @@ int main()
 
     return 0;
 }
+
